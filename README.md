@@ -6,16 +6,7 @@ Simple Python Debugger (sdebugger) is a simplistic debugger that helps user keep
 ```sh
 pip install sdebugger
 ```
-### 
-#### Building for source
-For production release:
-```sh
-$ gulp build --prod
-```
-Generating pre-built zip archives for distribution:
-```sh
-$ gulp build dist --prod
-```
+
 ### Usage
 
 Use as a decorator
