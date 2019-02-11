@@ -1,1 +1,1 @@
-from sdebugger import Decorators
+from sdebugger.sdebugger import Decorators
