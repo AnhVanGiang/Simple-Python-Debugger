@@ -11,7 +11,7 @@ pip install sdebugger
 
 Use as a decorator
 ```sh
-from sdebugger import Decorators
+from sdebugger.sdebugger import Decorators
 
 @Decorators.typecheck
 @Decorators.timecheck
@@ -27,7 +27,7 @@ class Test:
 User as a function
 
 ```sh
-from sdebugger import Decorators
+from sdebugger.sdebugger import Decorators
 
 class Test:
     def __init__(self):
@@ -44,7 +44,7 @@ newclass2 = Decorators.timecheck(newclass1())
 Nested function
 
 ```sh
-from sdebugger import Decorators
+from sdebugger.sdebugger import Decorators
 
 class Test:
     def __init__(self):
