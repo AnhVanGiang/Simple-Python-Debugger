@@ -1,10 +1,11 @@
 from functools import wraps
 import time
+import logging
 
 
 class Decorators:
     def __init__(self):
-        pass
+        logging.basicConfig(level=logging.INFO)
 
     @classmethod
     def timecheck(cls, clss: object) -> object:
@@ -22,9 +23,9 @@ class Decorators:
                     arguments = kwargs
                 else:
                     arguments = args
-                print('Running function "{}" with arguments: {}'.format(func.__name__, arguments))
+                logging.info(msg='Running function "{}" with arguments: {}'.format(func.__name__, arguments))
                 out = func(*args, **kwargs)
-                print('Elapsed time: {} for function {}'.format(time.time() - now, func.__name__))
+                logging.info(msg='Elapsed time: {} for function {}'.format(time.time() - now, func.__name__))
                 return out
             return check
 
