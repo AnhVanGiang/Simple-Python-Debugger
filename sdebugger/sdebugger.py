@@ -47,7 +47,7 @@ class Decorators:
                 types = func.__annotations__
                 kw = func.__annotations__.keys()
                 types_dic = {k: types[k] for k in kw if k != 'return'}
-                args_dic = {k: type(v) for k, v in zip(kw, args) if type(v) != object}
+                args_dic = {k: type(v) for k, v in zip(kw, args) if not isinstance(v, type(clss))}
                 final_args_dic = {**args_dic, **kwargs}
                 for k1, k2 in zip(types_dic.keys(), final_args_dic.keys()):
                     rtype = types_dic[k1]
