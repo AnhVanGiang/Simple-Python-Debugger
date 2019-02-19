@@ -52,7 +52,7 @@ class Decorators:
                 final_args_dic = {**args_dic, **kwargs}
                 for k1, k2 in zip(types_dic.keys(), final_args_dic.keys()):
                     rtype = types_dic[k1]
-                    atype = type(final_args_dic[k1])
+                    atype = final_args_dic[k1]
                     if rtype == atype:
                         continue
                     else:
